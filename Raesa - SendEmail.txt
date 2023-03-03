@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coleta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <medidor>
+    <nmro_serie>8428657</nmro_serie>
+    <nmro_mae>AMCR--COMBA05C</nmro_mae>
+    <nmro_mae_mdr>AMCR--COMBA05C</nmro_mae_mdr>
+  </medidor>
+  <combustivel tipo="GAS_NATURAL" const_integ="3600">
+    <leitura_cmbs data="2023-03-02" hora="00:00:00">
+      <medicao>
+        <consumo>00018245.280</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="01:00:00">
+      <medicao>
+        <consumo>00018207.820</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="02:00:00">
+      <medicao>
+        <consumo>00018272.340</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="03:00:00">
+      <medicao>
+        <consumo>00018127.380</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="04:00:00">
+      <medicao>
+        <consumo>00018396.480</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="05:00:00">
+      <medicao>
+        <consumo>00018305.370</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="06:00:00">
+      <medicao>
+        <consumo>00017921.590</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="07:00:00">
+      <medicao>
+        <consumo>00018600.750</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="08:00:00">
+      <medicao>
+        <consumo>00018269.980</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="09:00:00">
+      <medicao>
+        <consumo>00018253.630</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="10:00:00">
+      <medicao>
+        <consumo>00018330.560</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="11:00:00">
+      <medicao>
+        <consumo>00017769.090</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="12:00:00">
+      <medicao>
+        <consumo>00018875.890</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="13:00:00">
+      <medicao>
+        <consumo>00018305.670</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="14:00:00">
+      <medicao>
+        <consumo>00018298.970</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="15:00:00">
+      <medicao>
+        <consumo>00018322.560</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="16:00:00">
+      <medicao>
+        <consumo>00018312.340</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="17:00:00">
+      <medicao>
+        <consumo>00018292.500</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="18:00:00">
+      <medicao>
+        <consumo>00018319.970</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="19:00:00">
+      <medicao>
+        <consumo>00018175.910</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="20:00:00">
+      <medicao>
+        <consumo>00018412.190</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="21:00:00">
+      <medicao>
+        <consumo>00018165.220</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-02" hora="23:00:00">
+      <medicao>
+        <consumo>00036205.090</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+  </combustivel>
+  <alarme />
+</coleta> 03/03/2023 00:01:01
+Comunicação CCEE 03/03/2023 00:01:01
+Com certificado 03/03/2023 00:01:01
+Ambiente False03/03/2023 00:01:01
+GeraXmlInformaColeta System.Xml.XmlDocument03/03/2023 00:01:01
+EndpointAddress ok 03/03/2023 00:01:01
+xmlSoap ok 03/03/2023 00:01:01
+ClientCertificates ok 03/03/2023 00:01:01
+Serviço está entrando no Método Enviar Email! True - 03/03/2023 00:01:57
+xmlRetornoErro Response vazio O tempo limite da operação foi atingido   em System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   em SendEmailService.Class.CONFIGURACAO_CCEE.EnviarRelCCEE(AGENDA_CONFIGURACAO_CCEE certificado, XmlDocument xml, Int32 agendaID, String urlBase, String endPoint, String SOAPAction, Int32 idEnvioColeta) na C:\WorkGit\SendEmailService\Class\CONFIGURACAO_CCEE.cs:linha 30703/03/2023 00:02:41
