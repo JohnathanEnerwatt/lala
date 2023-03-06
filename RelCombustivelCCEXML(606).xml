@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coleta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <medidor>
+    <nmro_serie>8428657</nmro_serie>
+    <nmro_mae>AMCR--COMBA05C</nmro_mae>
+    <nmro_mae_mdr>AMCR--COMBA05C</nmro_mae_mdr>
+  </medidor>
+  <combustivel tipo="GAS_NATURAL" const_integ="3600">
+    <leitura_cmbs data="2023-03-03" hora="00:00:00">
+      <medicao>
+        <consumo>00017636.840</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="01:00:00">
+      <medicao>
+        <consumo>00018424.580</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="02:00:00">
+      <medicao>
+        <consumo>00018354.320</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="05:00:00">
+      <medicao>
+        <consumo>00054770.300</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="06:00:00">
+      <medicao>
+        <consumo>00018260.660</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="10:00:00">
+      <medicao>
+        <consumo>00073143.710</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+    <leitura_cmbs data="2023-03-03" hora="12:00:00">
+      <medicao>
+        <consumo>00036556.410</consumo>
+        <pci>00000000.000</pci>
+      </medicao>
+    </leitura_cmbs>
+  </combustivel>
+  <alarme />
+</coleta>
