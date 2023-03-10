@@ -16,3 +16,11 @@ SELECT DISTINCT QuantityID FROM DataLog2
 WHERE SourceID = 187 
 --AND QuantityID = 10012
 AND DATEADD(MINUTE, -185, TimesTampUTC) LIKE '2023-02-16 %'
+
+
+
+SELECT SourceID AS [ROBSON 123], * FROM SourceQuantity  SQ
+INNER JOIN Quantity  Q
+ON SQ.QuantityID = Q.ID
+WHERE SQ.SourceID=187
+AND Q.Name LIKE '%active%'
