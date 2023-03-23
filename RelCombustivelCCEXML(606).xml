@@ -1,53 +1,142 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<coleta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <medidor>
-    <nmro_serie>8428657</nmro_serie>
-    <nmro_mae>AMCR--COMBA05C</nmro_mae>
-    <nmro_mae_mdr>AMCR--COMBA05C</nmro_mae_mdr>
-  </medidor>
-  <combustivel tipo="GAS_NATURAL" const_integ="3600">
-    <leitura_cmbs data="2023-03-03" hora="00:00:00">
-      <medicao>
-        <consumo>00017636.840</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="01:00:00">
-      <medicao>
-        <consumo>00018424.580</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="02:00:00">
-      <medicao>
-        <consumo>00018354.320</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="05:00:00">
-      <medicao>
-        <consumo>00054770.300</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="06:00:00">
-      <medicao>
-        <consumo>00018260.660</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="10:00:00">
-      <medicao>
-        <consumo>00073143.710</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-    <leitura_cmbs data="2023-03-03" hora="12:00:00">
-      <medicao>
-        <consumo>00036556.410</consumo>
-        <pci>00000000.000</pci>
-      </medicao>
-    </leitura_cmbs>
-  </combustivel>
-  <alarme />
-</coleta>
+USE [ION_Data]
+GO
+
+/****** Object:  View [dbo].[valores_relatorio_combustivel_gas2]    Script Date: 21/03/2023 14:38:38 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+ALTER     VIEW [dbo].[valores_relatorio_combustivel_gas2]
+AS
+
+(
+
+SELECT DISTINCT 
+	V.SEQ, 
+	V.USINA, 
+	V.ID_USINA, 
+	V.LOCADORA, 
+	V.ID_LOCADORA, 
+	cast(Sum(isnull(V.QuantityID,0)) as smallint) AS QuantityID, 
+	V.NUMERO_SERIE, 
+	V.COD_ELETROBRAS, 
+	V.data, 
+	V.dataUTC, 
+	Sum(isnull(V.Consumo,0)) AS Consumo,
+	Sum(isnull(V.Valor_Dia_Anterior,0)) AS Valor_Dia_Anterior,
+	Sum(isnull(V.pcs,0)) AS pcs,
+	Sum(isnull(V.pci,0)) AS pci
+FROM 
+
+(
+			SELECT DISTINCT 
+					V.SEQ, 
+					V.USINA, 
+					V.ID_USINA, 
+					V.LOCADORA, 
+					V.ID_LOCADORA, 
+					V.QuantityID, 
+					V.NUMERO_SERIE, 
+					V.COD_ELETROBRAS, 
+					V.data, 
+					V.dataUTC, 
+					
+				isnull(V.Value,0) AS Consumo,
+				isnull(0,0) AS Valor_Dia_Anterior,
+				isnull(0,0) AS pcs,
+				isnull(0,0) AS pci
+				FROM 
+					dbo.view_valores AS V 
+					INNER JOIN dbo.parametros AS P ON P.QUANTITYID = V.QuantityID AND V.ELEMENTOS = P.ELEMENTOS AND P.NOME = 'v_PERPETUA_D' 
+					
+					union all
+					
+				SELECT DISTINCT 
+					V.SEQ, 
+					V.USINA, 
+					V.ID_USINA, 
+					V.LOCADORA, 
+					v.ID_LOCADORA, 
+					0 QuantityID, 
+					V.NUMERO_SERIE, 
+					V.COD_ELETROBRAS, 
+					V.data, 
+					V.dataUTC, 
+					
+				isnull(0,0) AS Consumo,
+				isnull(V.Value,0) AS Valor_Dia_Anterior,
+				isnull(0,0) AS pcs,
+				isnull(0,0) AS pci
+				FROM 
+					dbo.view_valores AS V 
+					INNER JOIN dbo.parametros AS P ON P.QUANTITYID = V.QuantityID AND V.ELEMENTOS = P.ELEMENTOS AND P.NOME = 'v_PERPETUA_Dia_Anterior' 
+					
+					union all 
+
+					SELECT DISTINCT 
+					V.SEQ, 
+					V.USINA, 
+					V.ID_USINA, 
+					V.LOCADORA, 
+					V.ID_LOCADORA, 
+					0 QuantityID, 
+					V.NUMERO_SERIE, 
+					V.COD_ELETROBRAS, 
+					V.data, 
+					V.dataUTC, 
+					
+				isnull(0,0) AS Consumo,
+				isnull(0,0) AS Valor_Dia_Anterior,
+				isnull(V.Value,0) AS pcs,
+				isnull(0,0) AS pci
+				FROM 
+					dbo.view_valores AS V 
+					INNER JOIN dbo.parametros AS P ON P.QUANTITYID = V.QuantityID AND V.ELEMENTOS = P.ELEMENTOS AND P.NOME = 'PCS' 
+					
+					union all
+
+					SELECT DISTINCT 
+					V.SEQ, 
+					V.USINA, 
+					V.ID_USINA, 
+					V.LOCADORA, 
+					V.ID_LOCADORA, 
+					100 QuantityID, 
+					V.NUMERO_SERIE, 
+					V.COD_ELETROBRAS, 
+					V.data, 
+					V.dataUTC, 
+					
+				isnull(0,0) AS Consumo,
+				isnull(0,0) AS Valor_Dia_Anterior,
+				isnull(0,0) AS pcs,
+				isnull(V.Value,0) AS pci
+				FROM 
+					dbo.view_valores AS V 
+					INNER JOIN dbo.parametros AS P ON P.QUANTITYID = V.QuantityID AND V.ELEMENTOS = P.ELEMENTOS AND P.NOME = 'PCI' 
+					
+
+) V
+group by V.SEQ, 
+	V.USINA, 
+	V.ID_USINA, 
+	V.LOCADORA, 
+	V.ID_LOCADORA, 
+	V.NUMERO_SERIE, 
+	V.COD_ELETROBRAS, 
+	V.data, 
+	V.dataUTC
+
+
+	)
+GO
+
+
